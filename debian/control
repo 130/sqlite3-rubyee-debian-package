@@ -1,0 +1,18 @@
+Source: sqlite3-rubyee
+Maintainer: Leonid Borisenko <leo.borisenko@gmail.com>
+Section: interpreters
+Priority: optional
+Homepage: http://rubyforge.org/projects/sqlite-ruby
+Build-Depends: debhelper (>= 4), quilt, libsqlite3-dev, swig, rubyee1.8, rubyee1.8-dev
+Standards-Version: 3.8.0
+
+Package: libsqlite3-rubyee1.8
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: SQLite3 interface for Ruby Enterprise Edition 1.8
+ SQLite3/Ruby module allows Ruby programs to interface with the SQLite3
+ database engine.
+ .
+ Note that this module is NOT compatible with SQLite 2.x.
+ .
+ This package contains SQLite3 module for Ruby Enterprise Edition 1.8.

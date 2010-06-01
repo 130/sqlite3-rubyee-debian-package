@@ -1,0 +1,24 @@
+sqlite3-rubyee (1.2.4-1) lenny; urgency=low
+
+  * Initial release.
+  * 'debian' directory was copied from ofiicial Debian sqlite3-ruby (1.2.4-2.1)
+     package (maintained by Dmitry Borodaenko) with following changes:
+       - debian/control
+         * source package name was changed from sqlite3-ruby to sqlite3-rubyee
+         * changed Maintainer name
+         * ruby1.8, ruby1.8-dev, ruby1.9.1, ruby1.9.1-dev are all replaced by
+           rubyee1.8, rubyee1.8-dev in Build-Depends
+         * libsqlite3-ruby1.8 package was renamed to libsqlite3-rubyee1.8
+         * libsqlite3-rubyee1.8 Description was changed
+         * libsqlite3-ruby1.9.1 package was removed
+      - debian/rules
+         * suffix '18' was changed to 'ee18'
+         * rules related to packaging libsqlite3-ruby1.9.1 were removed
+      - debian/copyright
+         * added maintainer name
+  * debian/control: added libgoogle-perftools-dev in Build-Depends (as
+    rubyee1.8 is linked with libtcmalloc-minimal and it's represented in
+    rbconfig.rb, therefore Ruby EE native extension is also will be linked
+    with libtcmalloc-minimal).
+
+ -- Leonid Borisenko <leo.borisenko@gmail.com>  Sun, 30 May 2010 22:24:14 +0300
